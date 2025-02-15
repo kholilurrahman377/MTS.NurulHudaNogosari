@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - MTS Nurul Huda Nogosari</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <nav>
+            <div class="logo">
+                <img src="asset/Gambar_WhatsApp_2025-01-20_pukul_09.55.01_6cd010d1-removebg-preview.png" alt="MTS Nurul Huda Nogosari">
+                MTS Nurul Huda Nogosari
+            </div>
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#">PROFIL ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="visi-misi.html">Visi, Misi & Tujuan</a></li>
+                        <li><a href="profil-guru.html">Data Guru</a></li>
+                    </ul>
+                </li>
+                <li><a href="kurikulum.html">KURIKULUM</a></li>
+                <li><a href="galeri.html">GALERI</a></li>
+                <li><a href="alamat.html">ALAMAT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tombol Kembali -->
+    <button class="back-button" onclick="goBack()">← Kembali</button>
+
+    <!-- Main Content -->
+    <main>
+      <section
+        id="gallery"
+        style="
+          padding: 40px 20px;
+          background-color: #ffffff;
+          text-align: center;
+          border-bottom: 5px solid #023b1d;
+        "
+      >
+        <h1 style="font-size: 36px; color: #023b1d; margin-bottom: 20px;">
+          Gallery Kegiatan MTS Nurul Huda Nogosari
+        </h1>
+        <p style="font-size: 18px; color: #555; margin-bottom: 30px;">
+          Dokumentasi berbagai kegiatan di MTS Nurul Huda Nogosari.
+        </p>
+
+        <!-- Image Grid -->
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+          "
+        >
+          <!-- Item 1 -->
+          <div
+            style="
+              position: relative;
+              overflow: hidden;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <img
+              src="asset/IMG-20250120-WA0002.jpg"
+              alt="Pelaksanaan PKKM"
+              style="width: 100%; height: 200px; object-fit: cover;"
+            />
+            <p
+              style="
+                position: absolute;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                width: 100%;
+                padding: 10px 0;
+                margin: 0;
+                font-size: 14px;
+              "
+            >
+              Pelaksanaan PKKM oleh guru madrasah
+            </p>
+          </div>
+          <!-- Item 2 -->
+          <div
+            style="
+              position: relative;
+              overflow: hidden;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <img
+              src="asset/IMG-20250120-WA0003.jpg"
+              alt="Pelaksanaan PKKM"
+              style="width: 100%; height: 200px; object-fit: cover;"
+            />
+            <p
+              style="
+                position: absolute;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                width: 100%;
+                padding: 10px 0;
+                margin: 0;
+                font-size: 14px;
+              "
+            >
+              Pelaksanaan PKKM oleh guru madrasah
+            </p>
+          </div>
+          <!-- Item 3 -->
+          <div
+            style="
+              position: relative;
+              overflow: hidden;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <img
+              src="asset/IMG-20250120-WA0004.jpg"
+              alt="Pembinaan Guru Sertifikasi"
+              style="width: 100%; height: 200px; object-fit: cover;"
+            />
+            <p
+              style="
+                position: absolute;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                width: 100%;
+                padding: 10px 0;
+                margin: 0;
+                font-size: 14px;
+              "
+            >
+              Pembinaan Guru Sertifikasi
+            </p>
+          </div>
+          <!-- Item 4 -->
+          <div
+            style="
+              position: relative;
+              overflow: hidden;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <img
+              src="asset/IMG-20250120-WA0005.jpg"
+              alt="Pembinaan Guru Sertifikasi"
+              style="width: 100%; height: 200px; object-fit: cover;"
+            />
+            <p
+              style="
+                position: absolute;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                width: 100%;
+                padding: 10px 0;
+                margin: 0;
+                font-size: 14px;
+              "
+            >
+              Pembinaan Guru Sertifikasi
+            </p>
+          </div>
+    <script>
+         // Fungsi untuk kembali ke halaman sebelumnya
+      function goBack() {
+          window.history.back();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("show");
+            });
+
+            const dropdowns = document.querySelectorAll(".dropdown > a");
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    this.nextElementSibling.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+    <footer
+  >
+    <div style="max-width: 1200px; margin: auto;">
+      <p style="margin: 0;">&copy; 2025 MTS Nurul Huda Nogosari. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+                              

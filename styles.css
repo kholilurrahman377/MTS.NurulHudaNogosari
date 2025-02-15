@@ -1,0 +1,295 @@
+/* General body and layout styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Header styling */
+header {
+    background-image: url('asset/Bg.jpg'); /* Use your floral image URL here */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    text-align: center;
+}
+
+
+.top-bar {
+    padding: 10px;
+    text-align: right;
+    color: white;
+    font-size: 14px;
+    padding-right: 20px;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: space-between; /* Menjaga jarak antara logo dan menu */
+    align-items: center;
+    background: url('your-floral-image-url.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 10px 20px; /* Memberi ruang di kiri dan kanan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 20px; /* Menjaga jarak dari tepi */
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Memberi jarak antar item menu */
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.menu li a:hover {
+    background: #007016;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row; /* Pastikan tetap dalam satu baris */
+        justify-content: space-between;
+    }
+
+    .menu {
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 10px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+.btn-primary {
+    background: #ff5722;
+    color: #007016;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.btn-primary:hover {
+    background: #e64a19;
+}
+
+
+/* Content section styling */
+.content-section {
+    padding: 40px;
+    background: rgb(255, 255, 255);
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* General styling for headings */
+h2 {
+    color: #000000;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+/* General styling for the content section */
+.content-section {
+    padding: 40px;
+    background: white;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.guru-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.guru-table th, .guru-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.guru-table th {
+    background-color: #007016;
+    color: white;
+}
+
+.guru-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.guru-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a {
+        padding: 15px;
+    }
+}
+
+/* Style dasar menu */
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.menu li {
+    position: relative;
+}
+
+/* Style dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tampilkan dropdown saat hover (untuk desktop) */
+.menu .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Tampilkan dropdown saat aktif di HP */
+.menu .dropdown.active .dropdown-menu {
+    display: block;
+}
+
+/* Style tombol menu untuk HP */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style untuk tampilan mobile */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+}
+/* Tombol Kembali */
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background: #059212;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background: #059212;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTS Nurul Huda Nogosari</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <nav>
+            <div class="logo">
+                <img src="asset/Gambar_WhatsApp_2025-01-20_pukul_09.55.01_6cd010d1-removebg-preview.png" alt="MTS Nurul Huda Nogosari">
+                MTS Nurul Huda Nogosari
+            </div>
+            <button class="menu-toggle">☰</button> <!-- Tombol menu untuk HP -->
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#">PROFIL ▼</a> 
+                    <ul class="dropdown-menu">
+                        <li><a href="visi-misi.html">Visi, Misi & Tujuan</a></li>
+                        <li><a href="profil-guru.html">Data Guru</a></li>
+                    </ul>
+                </li>
+                <li><a href="kurikulum.html">KURIKULUM</a></li>
+                <li><a href="galeri.html">GALERI</a></li>
+                <li><a href="alamat.html">ALAMAT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content-section">
+        <h2>Welcome to MTS Nurul Huda Nogosari</h2>
+        <p>Ini adalah halaman utama sekolah.</p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Toggle menu untuk HP
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("show");
+            });
+
+            // Toggle dropdown di HP
+            const dropdowns = document.querySelectorAll(".dropdown > a");
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener("click", function(event) {
+                    event.preventDefault(); // Mencegah halaman berpindah
+                    this.nextElementSibling.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

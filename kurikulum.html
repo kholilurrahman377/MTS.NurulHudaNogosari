@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurikulum - MTS Nurul Huda Nogosari</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <nav>
+            <div class="logo">
+                <img src="asset/Gambar_WhatsApp_2025-01-20_pukul_09.55.01_6cd010d1-removebg-preview.png" alt="MTS Nurul Huda Nogosari">
+                MTS Nurul Huda Nogosari
+            </div>
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="profil.html">PROFIL ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="visi-misi.html">Visi, Misi & Tujuan</a></li>
+                        <li><a href="profil-guru.html">Data Guru</a></li>
+                    </ul>
+                </li>
+                <li><a href="kurikulum.html">KURIKULUM</a></li>
+                <li><a href="galeri.html">GALERI</a></li>
+                <li><a href="alamat.html">ALAMAT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tombol Kembali -->
+    <div class="back-button">
+        <button onclick="goBack()">&#8592; Kembali</button>
+    </div>
+
+    <section id="kurikulum" class="content-section">
+        <div style="max-width: 800px; margin: auto;">
+            <h1 style="font-size: 36px; color: #000000; margin-bottom: 20px;">
+              Kurikulum MTS Nurul Huda Nogosari
+            </h1>
+            <p style="font-size: 18px; color: #555; margin-bottom: 30px;">
+              Berikut adalah penjelasan tentang kurikulum yang diterapkan di MTS Nurul Huda Nogosari:
+            </p>
+            <!-- Kurikulum Details -->
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+              <!-- Kelas VII -->
+              <div
+                style="
+                  flex: 1;
+                  min-width: 300px;
+                  padding: 20px;
+                  background: white;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  text-align: left;
+                "
+              >
+                <h2 style="font-size: 24px; color: #000000;">Kelas VII</h2>
+                <p style="font-size: 16px; color: #333; margin: 10px 0;">
+                  MTS Nurul Huda Nogosari untuk kelas VII menggunakan <strong>Kurikulum Merdeka</strong>, yang memberikan fleksibilitas lebih kepada siswa dalam pembelajaran.
+                </p>
+              </div>
+              <!-- Kelas VIII & IX -->
+              <div
+                style="
+                  flex: 1;
+                  min-width: 300px;
+                  padding: 20px;
+                  background: white;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  text-align: left;
+                "
+              >
+                <h2 style="font-size: 24px; color: #000000;">Kelas VIII & IX</h2>
+                <p style="font-size: 16px; color: #333; margin: 10px 0;">
+                  Kelas VIII dan IX tetap menggunakan <strong>Kurikulum 13</strong>, dengan pendekatan pembelajaran yang terstruktur dan fokus pada penguasaan materi akademik.
+                </p>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+      // Fungsi untuk kembali ke halaman sebelumnya
+      function goBack() {
+          window.history.back();
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+          const menuToggle = document.querySelector(".menu-toggle");
+          const menu = document.querySelector(".menu");
+
+          menuToggle.addEventListener("click", function() {
+              menu.classList.toggle("show");
+          });
+
+          const dropdowns = document.querySelectorAll(".dropdown > a");
+
+          dropdowns.forEach(dropdown => {
+              dropdown.addEventListener("click", function(event) {
+                  event.preventDefault();
+                  this.nextElementSibling.classList.toggle("active");
+              });
+          });
+      });
+    </script>
+     <footer
+   >
+     <div style="max-width: 1200px; margin: auto;">
+       <p style="margin: 0;">&copy; 2025 MTS Nurul Huda Nogosari. All rights reserved.</p>
+     </div>
+   </footer>
+</body>
+</html>

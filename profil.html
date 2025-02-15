@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - MTS Nurul Huda Nogosari</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <nav>
+            <div class="logo">
+                <img src="asset/logo.png" alt="MTS Nurul Huda Nogosari">
+                MTS Nurul Huda Nogosari
+            </div>
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#">PROFIL ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="visi-misi.html">Visi, Misi & Tujuan</a></li>
+                        <li><a href="profil-guru.html">Data Guru</a></li>
+                    </ul>
+                </li>
+                <li><a href="kurikulum.html">KURIKULUM</a></li>
+                <li><a href="galeri.html">GALERI</a></li>
+                <li><a href="alamat.html">ALAMAT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tombol Kembali -->
+    <button class="back-button" onclick="goBack()">← Kembali</button>
+
+    <!-- Profil Sekolah -->
+    <section class="content">
+        <h2>Profil Sekolah</h2>
+        <p>Selamat datang di halaman profil MTS Nurul Huda Nogosari. Sekolah kami adalah lembaga pendidikan yang berfokus pada pembentukan karakter, keimanan, serta kecerdasan intelektual. Berikut adalah beberapa informasi mengenai MTS Nurul Huda Nogosari:</p>
+        
+        <div class="profil-description">
+            <h3>Sejarah Singkat</h3>
+            <p>Didirikan pada tahun XXXX, MTS Nurul Huda Nogosari telah berperan penting dalam mencetak generasi penerus yang berprestasi dan berakhlakul karimah. Sejak awal berdirinya, sekolah ini berfokus pada pembelajaran yang memadukan ilmu pengetahuan umum dan agama Islam secara seimbang.</p>
+        </div>
+        
+        <div class="profil-description">
+            <h3>Visi dan Misi</h3>
+            <p>Visi dan misi sekolah ini dapat ditemukan di <a href="visi-misi.html">halaman Visi, Misi & Tujuan</a> kami. Kami berkomitmen untuk memberikan pendidikan yang terbaik untuk generasi penerus bangsa.</p>
+        </div>
+        
+        <div class="profil-description">
+            <h3>Fasilitas</h3>
+            <p>Dengan fasilitas yang lengkap dan lingkungan yang mendukung, kami memberikan ruang yang aman dan nyaman untuk belajar dan berkembang.</p>
+        </div>
+    </section>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("show");
+            });
+
+            const dropdowns = document.querySelectorAll(".dropdown > a");
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    this.nextElementSibling.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+     <footer
+   >
+     <div style="max-width: 1200px; margin: auto;">
+       <p style="margin: 0;">&copy; 2025 MTS Nurul Huda Nogosari. All rights reserved.</p>
+     </div>
+   </footer>
+</body>
+</html>
